@@ -69,15 +69,80 @@ Welcome to Week 4! This two-session assignment builds on Fortunate Cow by teachi
 
 ## Sample output
 
-<!-- TODO: Add your sample output here after completing the assignment! -->
+### Random fortune
+
+```bash
+npm start
+```
 
 ```text
- _______________________________
-< Arrays start at index 0       >
- -------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
+ _____________________________________________________________
+< Good afternoon! When in doubt, break it into smaller pieces >
+ -------------------------------------------------------------
+   \
+    \
+        .--.
+       |^_^ |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
 ```
+
+### Filter by category
+
+```bash
+npm start debugging
+```
+
+```text
+ _________________________________________________
+< Good afternoon! Console.log is your best friend >
+ -------------------------------------------------
+   \
+    \
+        .--.
+       |O_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+```
+
+### List categories
+
+```bash
+npm start -- --list
+```
+
+```text
+Available categories:
+  - debugging
+  - mindset
+  - workflow
+  - coding
+```
+
+### Count by category
+
+```bash
+npm start -- --count
+```
+
+```text
+Fortune counts by category:
+  debugging: 4
+  mindset: 3
+  workflow: 2
+  coding: 3
+  Total: 12
+```
+
+## HAP's design choices
+
+- **Theme:** Learning and growth mindset
+- **Categories:** coding, debugging, mindset, workflow
+- **Mood-based eyes:** ^^ (encouraging), == (serious), Oo (playful)
+- **Cow:** Tux the penguin
