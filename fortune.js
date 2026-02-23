@@ -1,5 +1,6 @@
 // fortune.js - HAP's Custom Cow
 // Refactored to use JSON data with categories and moods
+// Upgrades: emoji greetings, mood-based eyes
 
 import * as cowsay from "cowsay";
 import fortunes from "./fortunes.json" with { type: "json" };
@@ -21,9 +22,29 @@ if (hour < 12) {
 const randomIndex = Math.floor(Math.random() * fortunes.length);
 const todaysFortune = fortunes[randomIndex];
 
+// Choose eyes based on mood
+function getEyesForMood(mood) {
+  switch (mood) {
+    case "encouraging":
+      return "^^"; // Happy, supportive
+    case "serious":
+      return "=="; // Focused, determined
+    case "playful":
+      return "Oo"; // Silly, fun
+    default:
+      return "oo"; // Default eyes
+  }
+}
+
+const eyes = getEyesForMood(todaysFortune.mood);
+
 // Combine greeting and fortune text
 const fullMessage = `${greeting}! ${todaysFortune.text}`;
 
-// Display Tux the penguin
-const output = cowsay.say({ text: fullMessage, f: "tux" });
+// Display Tux the penguin with mood-based eyes
+const output = cowsay.say({
+  text: fullMessage,
+  f: "tux",
+  e: eyes,
+});
 console.log(output);
