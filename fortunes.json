@@ -1,0 +1,62 @@
+[
+  {
+    "text": "Errors are teachers in disguise",
+    "category": "debugging",
+    "mood": "encouraging"
+  },
+  {
+    "text": "Every expert was once a beginner",
+    "category": "mindset",
+    "mood": "encouraging"
+  },
+  {
+    "text": "Confusion is the first step to clarity",
+    "category": "mindset",
+    "mood": "serious"
+  },
+  {
+    "text": "Ask questions - that's how learning happens",
+    "category": "workflow",
+    "mood": "encouraging"
+  },
+  {
+    "text": "One small step today, one giant leap tomorrow",
+    "category": "mindset",
+    "mood": "encouraging"
+  },
+  {
+    "text": "Your code doesn't have to be perfect to be progress",
+    "category": "coding",
+    "mood": "encouraging"
+  },
+  {
+    "text": "Debugging is just problem-solving with extra steps",
+    "category": "debugging",
+    "mood": "playful"
+  },
+  {
+    "text": "Console.log is your best friend",
+    "category": "debugging",
+    "mood": "playful"
+  },
+  {
+    "text": "Read the error message. No, really read it.",
+    "category": "debugging",
+    "mood": "serious"
+  },
+  {
+    "text": "Commit early, commit often",
+    "category": "workflow",
+    "mood": "serious"
+  },
+  {
+    "text": "When in doubt, break it into smaller pieces",
+    "category": "coding",
+    "mood": "encouraging"
+  },
+  {
+    "text": "The best code is code you don't have to write",
+    "category": "coding",
+    "mood": "playful"
+  }
+]
