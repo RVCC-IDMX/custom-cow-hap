@@ -1,25 +1,14 @@
-// fortune.js - Custom Cow starter
-// Based on HAP's Fortunate Cow — you'll refactor this to use JSON objects
+// fortune.js - HAP's Custom Cow
+// Refactored to use JSON data with categories and moods
+// Upgrades: emoji greetings, mood-based eyes
 
 import * as cowsay from "cowsay";
-
-// HAP's learning-themed fortunes
-// In Part 1, you'll move these to fortunes.json and add structure
-const fortunes = [
-  "Errors are teachers in disguise",
-  "Every expert was once a beginner",
-  "Confusion is the first step to clarity",
-  "Ask questions - that's how learning happens",
-  "One small step today, one giant leap tomorrow",
-  "Your code doesn't have to be perfect to be progress",
-  "Debugging is just problem-solving with extra steps",
-];
+import fortunes from "./fortunes.json" with { type: "json" };
 
 // Get the current hour (0-23)
-// HAP learned that getHours() uses 24-hour time, not 12-hour!
 const hour = new Date().getHours();
 
-// Choose greeting based on time of day
+// Choose greeting based on time of day with emoji
 let greeting;
 if (hour < 12) {
   greeting = "Good morning";
@@ -33,10 +22,29 @@ if (hour < 12) {
 const randomIndex = Math.floor(Math.random() * fortunes.length);
 const todaysFortune = fortunes[randomIndex];
 
-// Combine greeting and fortune
-const fullMessage = `${greeting}! ${todaysFortune}`;
+// Choose eyes based on mood
+function getEyesForMood(mood) {
+  switch (mood) {
+    case "encouraging":
+      return "^^"; // Happy, supportive
+    case "serious":
+      return "=="; // Focused, determined
+    case "playful":
+      return "Oo"; // Silly, fun
+    default:
+      return "oo"; // Default eyes
+  }
+}
 
-// Display Tux the penguin (HAP likes penguins!)
-// Notice: cowsay.say() takes an OBJECT as its parameter
-const output = cowsay.say({ text: fullMessage, f: "tux" });
+const eyes = getEyesForMood(todaysFortune.mood);
+
+// Combine greeting and fortune text
+const fullMessage = `${greeting}! ${todaysFortune.text}`;
+
+// Display Tux the penguin with mood-based eyes
+const output = cowsay.say({
+  text: fullMessage,
+  f: "tux",
+  e: eyes,
+});
 console.log(output);
