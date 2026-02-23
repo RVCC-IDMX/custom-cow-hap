@@ -1,0 +1,28 @@
+[
+  {
+    "text": "This fortune is valid",
+    "category": "coding"
+  },
+  {
+    "text": "This has an invalid category",
+    "category": "invalid-category-name"
+  },
+  {
+    "text": "This has tags as a string instead of array",
+    "category": "motivation",
+    "tags": "should-be-an-array"
+  },
+  {
+    "text": "This has wrong date format",
+    "category": "life",
+    "dateAdded": "February 20, 2026"
+  },
+  {
+    "text": "This has an extra field not in the schema",
+    "category": "humor",
+    "extraField": "This field is not allowed"
+  },
+  {
+    "category": "coding"
+  }
+]

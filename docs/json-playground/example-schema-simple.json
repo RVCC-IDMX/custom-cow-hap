@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Simple Fortunes",
+  "description": "Just an array of strings — no extra data per fortune",
+  "type": "array",
+  "items": {
+    "type": "string",
+    "minLength": 1
+  }
+}

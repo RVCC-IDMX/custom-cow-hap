@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fortunes with Categories",
+  "description": "Each fortune has text and a category for filtering",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["text", "category"],
+    "properties": {
+      "text": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The fortune message"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["coding", "motivation", "life", "humor"],
+        "description": "Category for filtering"
+      }
+    },
+    "additionalProperties": false
+  }
+}

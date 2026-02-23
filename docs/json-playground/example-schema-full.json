@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fortunes with All Fields",
+  "description": "Rich fortune data with categories, tags, author, and date",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["text"],
+    "properties": {
+      "text": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The fortune message"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["coding", "motivation", "life", "humor"],
+        "description": "Category for filtering"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Keywords for searching"
+      },
+      "author": {
+        "type": "string",
+        "description": "Who said or wrote this"
+      },
+      "dateAdded": {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "description": "ISO date (YYYY-MM-DD)"
+      }
+    },
+    "additionalProperties": false
+  }
+}

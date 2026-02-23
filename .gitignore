@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# AI conversation logs (keep private)
+.specstory/
+.claude/
+
+# Editor settings (optional - remove if you want to share VS Code config)
+# .vscode/

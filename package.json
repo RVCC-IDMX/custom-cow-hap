@@ -1,0 +1,22 @@
+{
+  "name": "custom-cow",
+  "version": "1.0.0",
+  "description": "Custom Cow - Copilot Tutorial: JSON Schema and Objects",
+  "type": "module",
+  "main": "fortune.js",
+  "scripts": {
+    "start": "node fortune.js",
+    "fortune": "node fortune.js"
+  },
+  "keywords": [
+    "cowsay",
+    "copilot",
+    "tutorial",
+    "json-schema"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
